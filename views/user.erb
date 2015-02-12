@@ -1,0 +1,21 @@
+<form action="/users/<%= @user[:id]%>" method="post">
+
+	<input type="hidden" name="_method" value="put">
+	First Name: <input type="text" name="first" value="<%= @user[:first]%>">
+	Last Name: <input type="text" name="last" value="<%= @user[:last]%>">
+	<input type="submit" value="Update User">
+
+
+
+</form>
+
+<form action="/users/<%= @user[:id]%>" method="post">
+
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete User">
+
+</form>
+
+
+
+  

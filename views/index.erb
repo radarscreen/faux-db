@@ -7,14 +7,22 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src = "/hello.js"></script>
 </head>
+
+
 <body>
   <h1>Here are our users!</h1>
   <% @users.each do |user| %>
-    <h2><%= user[:name]%></h2><a href="/users/<%= user[:id]%>"> Edit a user</a>
 
+   <h3><%= user[:first]%> <%=user[:last]%></h3>
+
+  <a href="/users/<%= user[:id]%>">Edit a user</a>
+<!-- #understand cursorily, but what like further clarification about <%= user[:id]%> -->
   <% end %>
+
   <p>
     <a href="/users/new">Add a user!</a>
   </p>
+
+
 </body>
 </html>
